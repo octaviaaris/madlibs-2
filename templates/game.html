@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+  <title>Welcome to the game!</title>
+  <link rel="stylesheet" href="/static/madlibs.css">
+</head>
+<body>
+
+<h1>Welcome to the game!</h1>
+
+<form action="/madlib">
+  Name a person <input type="text" name="person">
+  <br>
+  <br>
+  Name a color <input type="text" name="color">
+  <br>
+  <br>
+  Name a noun <input type="text" name="noun">
+  <br>
+  <br>
+  Name an adjective <input type="text" name="adj">
+  <br>
+  <br>
+  Name a place <input type="text" name="place">
+  <br>
+  <br>
+  Name a food <input type="text" name="food">
+  <br>
+  <br>
+  Name a sound <input type="text" name="sound">
+  <br>
+  <br>
+  Name a action <input type="text" name="action">
+  <br>
+  <br>
+  Pick a mood:
+    <select name="mood">
+        <option value="jolly">Jolly</option>
+        <option value="livid">Livid</option>
+        <option value="loopy">Loopy</option>
+        <option value="anxious">Anxious</option>
+        <option value="adventurous">Adventurous</option>
+    </select>
+  <br>
+  <br>
+  Choose one to three animals:
+  <br>
+  <br>
+    {% for animal in animals %}
+        <input type="checkbox" name="animal" value={{ animal }}>{{ animal }}
+        <br>
+    {% endfor %}
+    <br>
+  <input type="submit">
+</form>
+
+</body>
+</html>

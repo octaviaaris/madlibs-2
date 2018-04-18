@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+  <title>Here's your story!</title>
+  <link rel="stylesheet" href="/static/madlibs.css">
+</head>
+<body>
+
+<h1>Here's your story!</h1>
+
+<p>{{ person }} was a {{ color }} {{ animal }} who liked to {{ action }}. They 
+    loved to go to {{ place }} and listen to {{ adjective }} {{ sound }}s. When 
+    they feel {{ mood }}, they often find themselves eating {{ food }} by the
+    {{ noun }}.</p>
+
+<p>Do you want to play again?</p>
+    <form action="/game">
+        <input type="radio" name="answer" value="yes">YES
+        <input type="radio" name="answer" value="no">NO
+        <input type="submit" value="Submit">
+    </form>
+
+</body>
+</html>
